@@ -204,6 +204,7 @@ async def update_class(
         _class_item,  # $3 item
     )
 
+
 async def table_merge_class_tmp(
     _db: Connection,
 ) -> None:
@@ -326,9 +327,7 @@ async def update_issue(
     _error_texts: Optional[Dict[str, str]],
 ) -> None:
     #  sql template
-    sql_marker = (
-        "INSERT INTO markers_tmp VALUES ($1, $2, $3, $4, $5, $6, $7, (SELECT array_agg(j) FROM jsonb_array_elements($8::jsonb) AS t(j)), (SELECT array_agg(j) FROM jsonb_array_elements($9::jsonb) AS t(j)), $10)"
-    )
+    sql_marker = "INSERT INTO markers_tmp VALUES ($1, $2, $3, $4, $5, $6, $7, (SELECT array_agg(j) FROM jsonb_array_elements($8::jsonb) AS t(j)), (SELECT array_agg(j) FROM jsonb_array_elements($9::jsonb) AS t(j)), $10)"
 
     for location in _error_locations:
         lat = float(location["lat"])
