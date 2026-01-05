@@ -36,7 +36,7 @@ def _errors_geojson(
                         "coordinates": [float(res["lon"]), float(res["lat"])],
                     },
                     "properties": {
-                        "uuid": res["uuid"],
+                        "uuid": str(res["uuid"],)
                         "item": res["item"] or 0,
                         "class": res["class"] or 0,
                     },
