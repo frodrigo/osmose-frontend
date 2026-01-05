@@ -1546,8 +1546,8 @@ msgid ""
 msgstr ""
 "Adding new functionality of \"Osmose Editor\", initial support of mobile "
 "device and improvement of documentation was funded by region of Aquitaine, "
-"France; part of the OpenAquiMap project leading by "
-"\"Les Petits Débrouillards d'Aquitaine\"."
+"France; part of the OpenAquiMap project leading by \"Les Petits "
+"Débrouillards d'Aquitaine\"."
 
 #: ../src/components/issues-list.vue:196
 msgid "delete issue #{uuid}"
@@ -1921,3 +1921,13 @@ msgstr "Translation is done on {Weblate}"
 #: ../src/pages/translation.vue:55
 msgid "You can create a new language directly on {Weblate}."
 msgstr "You can create a new language directly on {Weblate}."
+
+#: ../src/pages/map/doc.vue:26
+msgid ""
+"In no case does Osmose-QA tell you the absolute right way to map. Always "
+"keep a critical eye."
+msgstr ""
+
+#: ../src/pages/map/top.vue:261
+msgid "Median latency of issues from original OSM data."
+msgstr ""
