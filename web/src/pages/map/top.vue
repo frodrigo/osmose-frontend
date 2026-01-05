@@ -130,6 +130,7 @@
         id="menu-delay"
         :warning="0.9"
         :error="1.6"
+        :title="$t('Median latency of issues from original OSM data.')"
         :v="(Date.now() - Date.parse(timestamp)) / 1000 / 60 / 60 / 24"
       >
         <router-link to="../control/update_summary">
