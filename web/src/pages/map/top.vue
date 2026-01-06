@@ -10,8 +10,9 @@
             v-for="(v, k) in languages_name"
             :key="k"
             :class="$route.params.lang == k ? 'bold' : ''"
+            @click="changeLang(v)"
           >
-            <router-link :to="'/' + k + location" @click="changeLang(v)">
+            <router-link :to="'/' + k + location">
               {{ v.name }} ({{ k }})
             </router-link>
           </li>
