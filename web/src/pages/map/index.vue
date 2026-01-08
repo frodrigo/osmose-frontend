@@ -473,6 +473,10 @@ a:visited {
   display: flex;
 }
 
+html[dir=rtl] .map-container {
+  flex-direction: row-reverse;
+}
+
 .map-container .side-pannel {
   flex: initial;
 }

@@ -17,7 +17,13 @@ const loadedLanguages = ['en'] // our default language that is preloaded
 
 function setI18nLanguage(lang: string): string {
   i18n.locale = lang
-  document.querySelector('html').setAttribute('lang', lang)
+  window.document.lang = lang
+  if (lang === 'ar' || lang === 'fa' || lang === 'he') {
+    window.document.dir = 'rtl'
+  } else {
+    window.document.dir = undefined
+  }
+
   return lang
 }
 
