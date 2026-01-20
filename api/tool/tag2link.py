@@ -32,9 +32,15 @@ if __name__ == "__main__":
     t2l = tag2link("api/tool/tag2link_sources.json")
 
     print(t2l.addLinks({"website": "a"}))
-    assert(t2l.addLinks({"website": "a"}) == [{"k": "website", "v": "a", 'vlink': 'a'}])
+    assert t2l.addLinks({"website": "a"}) == [{"k": "website", "v": "a", "vlink": "a"}]
     print(t2l.addLinks({"wikimedia_commons": "a"}))
-    assert(t2l.addLinks({"wikimedia_commons": "a"}) == [{"k": "wikimedia_commons", "v": "a", "vlink": "https://commons.wikimedia.org/wiki/a"}])
+    assert t2l.addLinks({"wikimedia_commons": "a"}) == [
+        {
+            "k": "wikimedia_commons",
+            "v": "a",
+            "vlink": "https://commons.wikimedia.org/wiki/a",
+        }
+    ]
 
     print(t2l.addLinks({"oneway": "yes"}))
     print(t2l.addLinks({"url": "plop.com"}))
