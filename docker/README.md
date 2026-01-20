@@ -4,7 +4,7 @@ Copy `.env.template` as `.env` and adjustcontent, only required to enable loggin
 
 Build the Docker image, within the docker directory:
 ```
-curl http://osmose.openstreetmap.fr/export/osmose-menu.sql.bz2 | bzcat > osmose-menu.sql
+curl -L https://osmose.openstreetmap.fr/export/osmose-menu.sql.bz2 | bzcat > osmose-menu.sql
 docker compose build
 ```
 
